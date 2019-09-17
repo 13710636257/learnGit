@@ -40,3 +40,4 @@ HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历�
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
 
+Creating a new branch is quick & simple.
