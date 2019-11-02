@@ -1,0 +1,72 @@
+Vue学习网点
+vue.js官方文档 ：https://cn.vuejs.org/v2/guide/components.html 
+
+Vue-router是Vue.js官方的路由管理器：https://router.vuejs.org/zh/
+
+Vuex是一个专门为Vue.js应用程序开发的状态管理模式：https://vuex.vuejs.org/zh/
+
+Axios一个基于Promise、易用、简洁且高效的http库：http://www.axios-js.com/docs/
+
+Swiper常用于移动端网站的内容触摸滑动插件：https://www.swiper.com.cn/
+
+Vant轻量、可靠的移动端 Vue 组件库，适用于商城类的项目 ：https://youzan.github.io/vant/#/zh-CN/intro
+
+Element,一套为开发者，设计师和产品经理，准备的基于Vue2.0的桌面的组件库 ：https://element.eleme.cn/#/zh-CN/component/layout
+
+iView UI 是一套基于 Vue.js 的开源 UI 组件库，主要服务于 PC 界面的中后台产品：http://v1.iviewui.com/docs/guide/install
+
+Mint UI 是基于 Vue.js 的移动端组件库：http://mint-ui.github.io/#!/zh-cn
+
+webpack一个现代 JavaScript 应用程序的静态模块打包器：https://www.webpackjs.com/concepts/
+
+Javascript学习网点
+廖雪峰的官方网站：https://www.liaoxuefeng.com/wiki/1022910821149312
+
+阮一峰ES6全套教程：http://jsrun.pro/tutorial/FZKKp 或 http://es6.ruanyifeng.com/
+
+WEB开发技术：https://developer.mozilla.org/zh-CN/docs/Web
+
+JQuery插件库
+jquery实例大全：https://www.cnblogs.com/suoning/p/5683047.html
+
+SuperSlide2.1滑动门jQuery插件：http://www.a5xiazai.com/demo/code_pop/18/562/
+
+Layer web弹窗/层插件：http://layer.layui.com/mobile/api.html
+
+CSS
+Bootstrap 是一套用于 HTML、CSS 和 JS 开发的开源工具集,
+用于开发响应式布局、移动设备优先的 WEB 项目:https://www.bootcss.com/
+
+Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展
+
+SASS - 成熟、稳定、强大的 CSS 扩展语言解析器:https://www.sasscss.com/
+
+css 动画:animate.css https://daneden.github.io/animate.css/
+
+其他
+Font Awesome 字体图标库：http://www.fontawesome.com.cn/
+
+BootCDN前端开源项目 CDN 加速服务：https://www.bootcdn.cn/
+
+Easy Mock 伪造数据：https://easy-mock.com/login
+
+在线JSON校验格式化工具：https://www.bejson.com/
+
+在线前端编辑器：https://codesandbox.io/s/elegant-bash-w3igu
+
+GitHub一个免费的远程仓库，也是一个开源协作社区：https://github.com/
+
+码云国内的Git托管服务：https://gitee.com/
+
+Git是目前世界上最先进的分布式版本控制系统：https://www.liaoxuefeng.com/wiki/896043488029600
+
+iT技术社区
+CSDN:https://www.csdn.net/
+
+博客园：https://www.cnblogs.com/cate/108703/
+
+小程序
+小程序官方文档：https://developers.weixin.qq.com/miniprogram/dev/framework/
+小程序管理后台：https://mp.weixin.qq.com/
+微信公众号平台开发：https://developers.weixin.qq.com/doc/offiaccount/Getting_Started/Overview.html
+

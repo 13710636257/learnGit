@@ -15,11 +15,20 @@ HTTP请求流程:
 
 步骤3：如果浏览器还需要继续向服务器请求其他资源，比如图片，就再次发出HTTP请求，重复步骤1、2。
 
+Http与Https的区别
+HTTP 的URL 以http:// 开头，而HTTPS 的URL 以https:// 开头
+HTTP 是不安全的，而 HTTPS 是安全的HTTP 标准端口是80 ，而 HTTPS 的标准端口是443
+在OSI 网络模型中，HTTP工作于应用层，而HTTPS 的安全传输机制工作在传输层
+HTTP 无法加密，而HTTPS 对传输的数据进行加密
+HTTP无需证书，而HTTPS 需要CA机构wosign的颁发的
+
+
 你所知道的http的响应码及含义？
 比较常见的有200、400、401、404、500、502
 2xx(成功)
 200:正确的请求返回正确的结果
 201：表示资源被正确的创建，比如说，我们 POST 用户名、密码正确创建了一个用户就可以返回 201。
+
 3xx(重定向）
 300：请求成功，但结果有多种选择。
 304：请求的资源并没有被修改过
@@ -49,7 +58,7 @@ Ajax = 异步 javascript和XML ，是一种创建交互式网页应用的网页�
 Ajax是一种在无需重新加载整个网页的情况下，能够更新部分的网页技术
 通过在后台与服务器进行少量数据交换，Ajax 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。
 
-Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中，axios是通过promise实现对ajax技术的一种封装
+Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中，axios是通过promise实现对ajax技术的一种封装，axios本身可以解决回调地狱的问题
 支持 Promise API
 拦截请求和响应
 转换请求数据和响应数据
@@ -59,18 +68,13 @@ Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js �
 
 简单来说： ajax技术实现了网页的局部数据刷新，axios实现了对ajax的封装。
 
-三、什么是Cookie？
-cookie是存储在用户本地终端上的数据
-Cookie上网作用就是用来解决 “如何记录客服端的用户信息”
-当用户访问web页面时，他的名字可以记录到cookie中 ，在用户下一次访问该页面时，就可以在cookie中读取用户的访问记录了。
-
-
 四、什么是异步？
 同步：一定要等任务执行完了，得到结果，才执行下一步任务。
 异步：不用等任务执行完，直接执行下一个任务。
 
 
 五、async 函数
+我们可以大约这么认为： async/await == generator + promise
 async function用来定义一个返回 AsyncFunction 对象的异步函数，异步函数是指通过事件循环异步执行的函数，它会通过一个隐式的 Promise 返回其结果。
 异步函数可以包含await指令，该指令会暂停异步函数的执行，并等待promise的执行，然后继续执行异步函数，并返回结果。
 await 关键字只在异步函数内有效，如果在异步函数外使用它，它会抛出错误
@@ -82,8 +86,13 @@ async函数的返回值是Promise对象。可以用then方法指定下一步操�
 有时，我们希望即使前一个异步操作失败，也不要中断后面的异步操作。
 这时可以将第一个await放在try...catch结构里面，这样不管这个异步操作是否成功，第二个await都会执行。
 
+
 Promise （异步编程的一种解决方案）
-所谓promise，简单来说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作)的结果,Promise 是一个对象，从它可以获取异步操作的消息
+promise对象用于表示一个异步操作的最终状态（完成和失败），以及其返回的值。
+then与catch方法
+then方法存在于所有的promise对象上，并且接收两个参数，第一个参数是promise状态为fulfilled（成功结束）的调用函数，第二个则是状态rejected（未成功结束）的调用函数
+
+
 
 六、页面渲染html的过程
 1、浏览器解析html代码，创建DOM树，并行请求css/image/js在DOM树中，每一个html都对应有一个节点，
@@ -95,24 +104,38 @@ DOM树完全和html标签一一对应，但是渲染树会忽略掉不需要渲�
 4、一旦渲染树创建好了，浏览器就可以根据渲染树直接将页面绘画到屏幕上
 
 
+七、如何优化页面、加快页面的加载速度
+1、优化图片格式和大小
+2、压缩css和js内容
+3、使用浏览器缓存
+4、开启网络压缩
+5、减少重定向请求
+6、使用CDN存储静态资源
+7、减少DNS查询次数
 
+三、什么是Cookie？
+cookie是存储在用户本地终端上的数据
+Cookie上网作用就是用来解决 “如何记录客服端的用户信息”
+当用户访问web页面时，他的名字可以记录到cookie中 ，在用户下一次访问该页面时，就可以在cookie中读取用户的访问记录了。
 
-对象
-javascrip的对象用来描述现实世界中的某个对象 ，用若干键值对描述他
- javascrip的对象用来描述现实世界中的某个对象 ，用若干键值对描述他
- 属性对应的值可以是任意的数据类型
-const xiaoming = {
-  name: "小明",
-  age: 25,
-  sex: "男"
-};
-两种获取属性值的方式
-xiaoming.age or xiaoming['age']
- 我可以自由的给对象添加或删除属性
-xiaoming["name"] = "张晓明";
-delete xiaoming["name"]
-var x = xiaoming["name"];
-console.log(x);
- 判断一个属性是否是xiaoming自身拥有的，而不是继承得来的，通过hasOwnProperty
+八、web storage和cookie的区别 
+cookie是网站为了标识用户身份而存储在用户本地终端上的数据（通常是经过加密的）
+cookie的数据始终在同源的http请求中携带，在浏览器和服务器之间来回传递
+Web Storage仅仅是为了在本地“存储”数据而生。
+
+存储大小：
+ cookie数据大小不能超过4k。
+ sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大
+有效时间:
+ localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；
+ sessionStorage  数据在当前浏览器窗口关闭后自动删除。
+ cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
+ 除此之外 web storage拥有setItem、getItem、removeItem、clear等方法，不像cookie需要前端开发者封装setCookie、getCookie。
+ 但是Cookie也是不可以或缺的：Cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”数据而生。
  
-数组
+ 
+ 
+ 
+ 
+ 
+ 
