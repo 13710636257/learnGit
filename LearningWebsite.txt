@@ -43,6 +43,10 @@ SASS - 成熟、稳定、强大的 CSS 扩展语言解析器:https://www.sasscss
 
 css 动画:animate.css https://daneden.github.io/animate.css/
 
+HTML5
+菜鸟教程：https://www.runoob.com/html/html5-canvas.html
+HTML5 Canvas ：https://www.runoob.com/w3cnote/html5-canvas-intro.html
+
 其他
 Font Awesome 字体图标库：http://www.fontawesome.com.cn/
 

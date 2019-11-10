@@ -38,13 +38,11 @@ Getter：允许组件从 Store 中获取数据，mapGetters 辅助函数仅仅�
 Mutation：是唯一更改 store 中状态的方法，且必须是同步函数。
 Action：用于提交 mutation，而不是直接变更状态，可以包含任意异步操作。
 Module：允许将单一的 Store 拆分为多个 store 且同时保存在单一的状态树中。
-
 场景应用有：单页面应用中，组件之间的状态，音乐播放、登入状态、加入购物车等
 
 
 四、Vue懒加载
 3种方式：vue异步组件、webpack 中提供了 require.ensure()来实现按需加载，es6提案的import()
-
 
 五、谈谈对<keep-alive>的了解
 keep-alive是Vue提供的一个抽象组件，用来对组件进行缓存、从而节省性能，可以使被包含的组件保留状态，避免重新渲染，
@@ -136,9 +134,41 @@ beforeDestory() 和 destoryed()：前者是销毁前执行（实例仍然完全�
 2、ssr 不支持 beforeMount 、mounted 钩子函数，所以放在 created 中有助于一致性；
 
 十八、v-model的原理
-
+我们在vue项目中主要用v-model指令在表单 input、textarea、select等元素上创建双向数据绑定，v-model本质上不过是语法糖
+v-model在内部为不同的输入元素，使用不同的属性并抛出不同的事件:
+	text和textarea元素使用value属性和input事件
+	checkbox 和 radio 使用 checked 属性和 change 事件
+	select 字段将 value 作为 prop 并将 change 作为事件
+	
+	<input v-model='something'>
+	相当于
+	<input v-bind:value="something" v-on:input="something = $event.target.value">
+	
+	如果在自定义组件中使用 v-model，v-model 默认会利用名为 value 的 prop 和名为 input 的事件
 
 十九、Vue 组件间通信有哪几种方式？
+Vue的组件通信主要有三类：父子组件通信、兄弟组件通信、隔代组件通信
+1、props/$emit 适用父子组件通信
+2、$parent / $children：访问父 / 子实例  适用于父子组件通信
+3、EventBus($emit/$on) 中央事件总线bus 适用于 父子、隔代、兄弟组件通信
+这种方法通过创建一个空的vue实例作为中央事件总线（事件中心），用它来触发事件和监听事件，从而实现任何组件之间的通信
+4、Vuex 适用于 父子、隔代、兄弟组件通信
+5、$attrs/$listeners 适用于 隔代组件通信
+
+二十、vue-router 有哪几种导航钩子?
+vue-router提供的导航守卫主要用来通过跳转或取消的方式来守卫导航。
+有多种机会植入路由导航过程中：全局的、单个路由独享的、或者组件级的。
+全局导航钩子
+router.beforeEach(to, from, next);//全局前置守卫
+router.beforeResolve(to, from, next)//全局解析守卫
+router.afterEach((to, from)//q全局后置守卫
+路由独享守卫
+beforeEnter: (to, from, next)
+
+组件内的守卫
+beforeRouteEnter
+beforeRouteUpdate (2.2 新增)
+beforeRouteLeave
 
 
 

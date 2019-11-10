@@ -7,3 +7,55 @@ calc()函数支持 "+", "-", "*", "/" 运算，
 
 @media 查询 你可以针对不同的媒体类型定义不同的样式。
 
+
+2、HTML语义化的理解
+用正确的标签做正确的事情
+html语义化让页面的内容结构化，结构更清晰，便于浏览器、搜索引擎解析
+搜索引擎的爬虫也依赖于html标记来确定上下文和各个关键字的权重，利于seo
+使阅读源代码的人对网站更容易将网站分块，便于维护理解
+
+三、HTML5有哪些新特性？
+1、用于绘画的canvas。
+2、用于媒介回放的video和audio元素
+3、对本地离线存储的更好支持 ，
+本地离线存储localStorage长期存储数据，浏览器关闭后数据不丢失，
+sessionStorage的数据在浏览器关闭后会自动删除。
+4、新的特殊内容元素：artical、footer、header、nav、section
+5、新的表单控件：calendar、data、time、Email、url、search
+6、 新的技术webworker, websocket, Geolocation;
+
+四、如何处理HTML5新标签的浏览器的兼容问题？
+   IE8/IE7/IE6支持通过document.createElement方法产生的标签，
+     可以利用这一特性让这些浏览器支持HTML5新标签，
+     浏览器支持新标签后，还需要添加标签默认的样式。
+
+     当然也可以直接使用成熟的框架、比如html5shim;
+     <!--[if lt IE 9]>
+        <script> src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"</script>
+     <![endif]-->
+     
+ 
+五、什么是Canvas
+ Canvas是HTML5新增的组件，他就像一块幕布，可以用javascript在上面绘制各种图表、绘画等。
+ <canvas> 标签只是图形容器，您必须使用脚本来绘制图形。
+ 你可以通过多种方法使用canvas绘制路径、盒、圆、字符以及添加图像
+ canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成：
+ 
+六、什么是SVG
+SVG意为可缩放矢量图形，使用XML格式定义图像
+与其他图像格式相比，使用 SVG 的优势在于：
+1、SVG与JPEG和GIF图像比起来，尺寸更小，且可压缩性更强
+2、SVG 图像可在任何的分辨率下被高质量地打印
+3、SVG可在图像质量不下降的情况下被放大
+4、SVG 图像中的文本是可选的，同时也是可搜索的（很适合制作地图）
+SVG有一些预定义的形状元素，可被开发者使用和操作：
+矩形 <rect>
+圆形 <circle>
+椭圆 <ellipse>
+线 <line>
+折线 <polyline>
+多边形 <polygon>
+路径 <path>等
+
+
+七、1px、1rem、1em、1vh、各自代表的含义？
