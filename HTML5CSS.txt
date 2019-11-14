@@ -59,3 +59,24 @@ SVG有一些预定义的形状元素，可被开发者使用和操作：
 
 
 七、1px、1rem、1em、1vh、各自代表的含义？
+px像素，相对长度单位，像素px是相对于显示器屏幕风辨率而言的，一般电脑的分辨率有{1920*1024}等不同的分辨率
+rem是全部的长度都相对于跟元素<html>元素，通常做法是给html元素设置一个字体大小，然后其他元素的长度单位都为rem
+em子元素字体大小的em是相对于父元素字体大小，元素的width/height/padding/margin用em的话是相对于该元素的font-size
+vw/vh：全称是 Viewport Width 和 Viewport Height，视图的宽度和高度，
+相对于屏幕的宽度和高度的1%，不过，处理宽度的时候%单位更合适，处理高度的 话 vh 单位更好。
+
+八、画一条0.5px的直线
+height：0.5px；
+transform: scale(0.5);
+
+九、css盒模型
+有两种IE盒子模型和玩W3C盒子模型
+盒模型的组成由里到外：content、padding、border、margin
+
+在IE盒子模型中，width表示content+padding+border这三个部分的宽度
+在W3C盒子模型中，width指content部分的宽度
+
+box-sizing的使用  box-sizing的默认属性是content-box
+	box-sizing: content-box 是W3C盒子模型
+    box-sizing: border-box 是IE盒子模型
+

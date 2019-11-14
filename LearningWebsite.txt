@@ -19,6 +19,8 @@ Mint UI 是基于 Vue.js 的移动端组件库：http://mint-ui.github.io/#!/zh-
 
 webpack一个现代 JavaScript 应用程序的静态模块打包器：https://www.webpackjs.com/concepts/
 
+Nuxt.js是一个基于Vue.js的通用应用框架，为Node.js做vue的服务端渲染提供了各种配置
+
 Javascript学习网点
 廖雪峰的官方网站：https://www.liaoxuefeng.com/wiki/1022910821149312
 
