@@ -80,3 +80,4 @@ box-sizing的使用  box-sizing的默认属性是content-box
 	box-sizing: content-box 是W3C盒子模型
     box-sizing: border-box 是IE盒子模型
 
+

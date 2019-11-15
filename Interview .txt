@@ -87,12 +87,11 @@ async函数的返回值是Promise对象。可以用then方法指定下一步操�
 这时可以将第一个await放在try...catch结构里面，这样不管这个异步操作是否成功，第二个await都会执行。
 
 
-Promise （异步编程的一种解决方案）
+五、Promise （异步编程的一种解决方案）
 promise对象用于表示一个异步操作的最终状态（完成和失败），以及其返回的值。
 then与catch方法
 then方法存在于所有的promise对象上，并且接收两个参数，第一个参数是promise状态为fulfilled（成功结束）的调用函数，
 第二个则是状态rejected（未成功结束）的调用函数
-
 
 
 六、页面渲染html的过程
