@@ -44,6 +44,7 @@ Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量�
 SASS - 成熟、稳定、强大的 CSS 扩展语言解析器:https://www.sasscss.com/
 
 css 动画:animate.css https://daneden.github.io/animate.css/
+Layui是一款采用自身模块规范编写的前端UI框架，可作为PC端后台系统与前台界面的速成开发方案：https://www.layui.com/doc/
 
 HTML5
 菜鸟教程：https://www.runoob.com/html/html5-canvas.html
