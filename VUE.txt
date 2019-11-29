@@ -20,8 +20,6 @@ VUE全家桶：
 衍生如何解决单页及多页面各自优点的问题
 服务端渲染
 
-
-
 二、什么是 MVVM？
 MVVM(Model-View-ViewModel)是一种软件架构设计模式,是由经典的软件架构MVC衍生而来的，MVVM的出现促进了前端开发与后端业务逻辑的分离，极大的提高了前端开发的效率。
 MVVM的核心是ViewModel层, ViewModel相当于一个中转站，负责转换model中的数据对象来让数据变得更容易管理和使用，该层向上与视图双向绑定数据，
@@ -29,6 +27,21 @@ MVVM的核心是ViewModel层, ViewModel相当于一个中转站，负责转换mo
 View是视图层，也就是页面,前端主要由 HTML 和 CSS 来构建 。
 Model 是指数据模型，泛指后端进行的各种业务逻辑处理和数据操控，对于前端来说就是后端提供的 api 接口。
 ViewModel：view与model沟通的桥梁，负责监听view或Model的修改,是实现MVVM双向绑定的要点
+
+MVC和MVVM的区别
+MMVC是Model-View- Controller的简写。即模型-视图-控制器
+Model(模型)：是应用程序中用于处理应用程序数据逻辑的部分，通常模型对象负责在数据库中存取数据
+View（视图）：是应用程序中处理数据显示的部分，通常视图是依据模型数据创建的
+Controller（控制器）：是应用程序中处理用户交互的部分，通常控制器负责从视图读取数据，控制用户输入，并向模型发送数据
+Controller是MVC中数据和视图的协调者，也就是在Controller里面把model的数据赋值给View来实现
+（或者是View接收用户输入的数据然后由Controller把这些数据传给Model来保存到本地或者上传到
+服务器）
+MVC的思想就是Controller负责将model的数据用view显示出来，换句话说就是在controller里面把model的数据赋值给view
+MVC是单向通信，也就是view跟model，必须通过Controller来承上启下
+
+MVC和MVVM的区别并不是VM完全取代了C，ViewModel存在目的在于抽离Controller中展示的业务逻辑，而不是替代Controller，
+其它视图操作业务等还是应该放在Controller中实现。也就是说MVVM实现的是业务逻辑组件的重用
+
 
 三、Vuex是什么？( 适用于父子、隔代、兄弟组件通信)
 vuex是一个专门为vue.js应用程序开发的状态管理模式，每一个Vuex应用的核心就是store，store基本上就是一个容器，它包含着你的应用中大部分的状态（state）
@@ -184,3 +197,4 @@ beforeRouteLeave
 
 服务端渲染的优势就是容易SEO，首屏加载快，SSR直接由服务端渲染好页面之间返回显示，无需等待下载js文件再去渲染，所以ssr有更快的内容到达时间。
 但是缺点也很明显：渲染过程在后端完成，那么肯定会耗费后端资源。费流量，即使局部页面的变化也需要重新发送整个页面
+

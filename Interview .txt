@@ -140,8 +140,8 @@ Web Storage仅仅是为了在本地“存储”数据而生。
  const声明的变量只可以在声明时赋值，不可随意修改，这是最大的特点。
  let 和 const 存在“暂时性死区”，这点也是和 var 不同的地方
  
- const 常量，不可变。
- let 变量，块作用域，不能重复声明覆盖。
+ const 声明常量，不可变。
+ let 声明变量，块作用域，不能重复声明覆盖。
  var 变量，函数作用域，能重复声明覆盖。
 
  十、Javascript严格模式 'use strict'
@@ -201,5 +201,9 @@ Number、字符串、布尔值（Boolean）、比较运算符、null和undefined
 
 十七、种声明变量的方式
 六种声明变量的方式：var命令和function命令 let和const命令 import命令和class命令
+
+
+
+
 
 

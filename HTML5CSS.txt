@@ -80,4 +80,19 @@ box-sizing的使用  box-sizing的默认属性是content-box
 	box-sizing: content-box 是W3C盒子模型
     box-sizing: border-box 是IE盒子模型
 
+十、css预编译
+常见的css预编译器有三种：less 、 sass 、 stylus。
+Bootstrop使用的是less。
 
+less是一门css预处理语言，他扩展了css语言，增加了变量，Mixin，函数等特性，使css更容易维护和扩展
+他不是一个直接使用的语言，而是一个生成css的语言。Less可以运行在Node或浏览器端。
+1、变量：ess 以@开头定义变量，并且使用时直接键入@名称
+普通变量，选择器变量，属性变量，Url变量
+2、嵌套：&符号，表示的是上1级选择器的名字
+3、媒体查询
+4、混合的方法
+6、继承（扩展）：extend是less的一个伪类。它可以继承所匹配声明中的全部样式。
+等等
+Css计算：cacl（）
+
+查看文档：https://www.jianshu.com/p/868d1bcbe12a
