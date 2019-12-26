@@ -60,3 +60,4 @@ ES6更新的内容主要有以下几点：
 	Array.from():转换具有Iterator接口的数据结构为真正的数组，返回新数组
 		类数组对象：包含length的对象，函数内部Arguments对象、NodeList对象
 		可遍历对象：String、Set结构、Map结构、Generator函数
+

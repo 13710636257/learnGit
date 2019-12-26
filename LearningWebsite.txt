@@ -1,4 +1,4 @@
-Vue学习网点
+﻿Vue学习网点
 vue.js官方文档 ：https://cn.vuejs.org/v2/guide/components.html 
 
 Vue-router是Vue.js官方的路由管理器：https://router.vuejs.org/zh/
@@ -66,6 +66,10 @@ GitHub一个免费的远程仓库，也是一个开源协作社区：https://git
 码云国内的Git托管服务：https://gitee.com/
 
 Git是目前世界上最先进的分布式版本控制系统：https://www.liaoxuefeng.com/wiki/896043488029600
+
+Nginx就是性能非常好的反向代理服务器，用来做负载均衡：https://www.jianshu.com/p/d8bd75c0fb1b
+正向代理为客服端代理，反向代理为服务端代理
+
 
 iT技术社区
 CSDN:https://www.csdn.net/
