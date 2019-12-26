@@ -11,6 +11,7 @@
 			同一个URL可添加,查询,删除,更改,在url后缀上为不同的值
 			
 			注：前后端分离的情况下，前端只保证发送数据结构和方式正确，其他的前端无法排查
+				添加字段的时候,一定要和后台给的字段相对应,区分大小写
 			
 			1、发ajax请求将数据添加到数据库中,请求方式为post(post向服务器发送资源) 
 				[添加]
@@ -34,7 +35,7 @@
 					}
 				});
 			
-			2,渲染表格时拿到同样的URL将数据查询出来,请求方式为GET,如果只查询单条数据,在data里面动态传入要查询的值
+			2,渲染表格时拿到同样的URL将数据查询出来,请求方式为GET,如果只查询单条数据,在data里面动态传入要查询的值,查询全部则不需要data
 				[查询]
 				$.ajax({
 					url: urlbasic +
@@ -42,12 +43,13 @@
 					type: "GET",
 					dataType: "json",
 					data: {
-						pdlinenameid: EngPdLineNameIds  //查询单条数据
+						pdlinenameid: EngPdLineNameIds  //查询单条数据  
 					},
 					cache: false,
 					async: false,////true 异步提交，false 同步提交
 					success: function (data, textStatus, jqXHR) {
 						console.log('属性', data.data);
+						//查询成功后，拿到了数据，在此处对数据进行处理
 					},
 					error: function (XMLHttpRequest, textStatus,errorThrown) {
 						console.log('出错了')
@@ -74,8 +76,8 @@
 				});
 
 			}
-
-			
+			 
+			4,使用本地存储的方式跨页面传值,A页面中存储了某个值,在B页面中获取存储的这个值
 			
 		</script>
 	</body>
