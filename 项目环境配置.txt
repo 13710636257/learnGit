@@ -1,0 +1,31 @@
+1、npm install -g @vue/cli
+2、创建项目文件 vue init webpack TravalVue 或vue create TravalVue 
+3、项目创建完后 进入项目里 cd TravalVue  ，执行npm run dev 运行起来
+
+4、项目初始化，在main.js中引入公共的初始化css样式，下载相应的插件，引入进去
+   npm install fastclick --save (移动设备上的浏览器默认会在用户点击屏幕大约延迟300毫秒后才会触发点击事件，
+			这是为了检查用户是否在做双击。为了能够立即响应用户的点击事件，才有了FastClick。)
+   npm install stylus -- save (stylus，是 CSS 的预处理框架，详情https://stylus.bootcss.com/）
+   npm install stylus-loader --save
+   npm install vue-awesome-swiper --save 轮播图插件
+   npm install better-scroll 是一款重点解决移动端（已支持 PC）各种滚动场景需求的插件
+
+5,在router中配置路由 ：路由就是根据网址的不同，返回不同的内容给用户
+
+6、将常用的css样式写在同一个css文件里，要用的时候引入进去
+
+注：改动了项目的配置项后需要重新启动服务, 拿到页面先布好局再实现功能
+
+7、在团队项目开发中，开发自己的项目功能时，先创建一个分支，开发完确定没问题了在合并到主支上
+
+
+
+如何将项目打包上线?
+	1,执行npm run build,然后项目中多次一个dist目录，将这个dist目录给到后端
+
+项目总结：
+
+8、node.js的升级和降级 node.js是前端的开发环境运行环境
+1、使用n模块来管理node版本
+2、安装NVM,通过NVM来安装和卸载Node
+3、先卸载、再安装

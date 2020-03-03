@@ -57,6 +57,7 @@ SVG有一些预定义的形状元素，可被开发者使用和操作：
 多边形 <polygon>
 路径 <path>等
 
+注：svg放在页面里做标签可以减少请求，提高用户体验
 
 七、1px、1rem、1em、1vh、各自代表的含义？
 px像素，相对长度单位，像素px是相对于显示器屏幕风辨率而言的，一般电脑的分辨率有{1920*1024}等不同的分辨率
@@ -96,3 +97,62 @@ less是一门css预处理语言，他扩展了css语言，增加了变量，Mixi
 Css计算：cacl（）
 
 查看文档：https://www.jianshu.com/p/868d1bcbe12a
+
+十一、css元素水平垂直居中四种方法 参考：https://blog.csdn.net/qq_27576607/article/details/78697812
+	1、方法1：position元素已知宽度
+	父元素设置position：relative
+	.content {
+	    background-color: #F00;
+	    width: 100px;
+	    height: 100px;
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    margin: -50px 0 0 -50px;
+	}
+
+	2、方法2：position transform 元素未知宽度
+	.content {
+	    background-color: #F00;
+	    width: 100px;
+	    height: 100px;
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%,-50%);
+	}
+
+	3、方法3：flex布局
+	
+	.box { //在父元素中设置
+	    background-color: #FF8C00;
+	    width: 300px;
+	    height: 300px;
+	    display: flex;//flex布局
+	    justify-content: center;//使子项目水平居中
+	    align-items: center;//使子项目垂直居中
+	}
+	
+十二：画一个三角形
+	.a {
+		width: 0;
+		height: 0;
+		
+		border-width: 50px;
+		border-style: solid;
+		border-color: transparent #0099CC transparent transparent;
+    	/*transform: rotate(90deg); /*顺时针旋转90°*/*/
+	}
+
+十三：清除浮动的方法以及原理
+	 使用after伪元素清除浮动
+	 .clearfix:after {
+	 	content:"";
+	 	display:block;
+	 	height:0;
+	 	clear:both;
+	 	visibility:hidden;
+	 }
+	.clearfix {
+		*zoom:1;
+	}
